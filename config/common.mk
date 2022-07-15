@@ -223,18 +223,24 @@ DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 PRODUCT_VERSION_MAJOR = 11
 PRODUCT_VERSION_MINOR = 69
 
-# Change LineageFE Version with each major release.
-LINEAGEFE_VERSION := Isobar
+# Javanese Official Release
+LIST = $(shell cat vendor/javanese/javanese.devices | awk '{ print $$1 }')
 
-LINEAGE_VERSION := LineageFE-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(LINEAGEFE_VERSION)
-LINEAGE_DISPLAY_VERSION := LineageFE-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-$(LINEAGEFE_VERSION)
+# Javanese Version
+JAVANESE_PLATFORM_VERSION := 1.0
+
+# Change Javanese Version with each major release.
+JAVANESE_VERSION := SURILI
+
+JAVANESE_VERSION := JavaneseOS-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(JAVANESE_BUILD)-$(JAVANESE_VERSION)
+JAVANESE_DISPLAY_VERSION := JavaneseOS-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(JAVANESE_BUILD)-$(JAVANESE_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
 -include vendor/lineage-priv/keys/keys.mk
 
-LINEAGE_DISPLAY_VERSION := $(LINEAGE_VERSION)
+JAVANESE_DISPLAY_VERSION := $(JAVANESE_VERSION)
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
