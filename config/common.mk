@@ -3,7 +3,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/lineagefe.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 
-PRODUCT_BRAND ?= LineageOS
+PRODUCT_BRAND ?= JavaneseOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -228,6 +228,9 @@ LIST = $(shell cat vendor/javanese/javanese.devices | awk '{ print $$1 }')
 
 # Javanese Version
 JAVANESE_PLATFORM_VERSION := 1.0
+
+# Branding
+include vendor/lineage/config/branding.mk
 
 # Change Javanese Version with each major release.
 JAVANESE_VERSION := SURILI
