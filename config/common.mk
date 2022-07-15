@@ -224,7 +224,7 @@ PRODUCT_VERSION_MAJOR = 11
 PRODUCT_VERSION_MINOR = 69
 
 # Javanese Official Release
-LIST = $(shell cat vendor/javanese/javanese.devices | awk '{ print $$1 }')
+LIST = $(shell cat vendor/lineage/javanese.devices | awk '{ print $$1 }')
 
 # Javanese Version
 JAVANESE_PLATFORM_VERSION := 1.0
