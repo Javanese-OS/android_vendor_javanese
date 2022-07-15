@@ -71,7 +71,7 @@ type generatorProperties struct {
 	Tool_files []string
 
 	// List of directories to export as headers
-	Export_include_dirs []string
+	Export_includes_dirs []string
 
 	// List of directories to export as sources
 	Export_source_dirs []string
