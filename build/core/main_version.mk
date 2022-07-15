@@ -4,12 +4,12 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# LineageFE System Version
+# JavaneseOS System Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION)
+    ro.javanese.version=$(JAVANESE_VERSION) \
+    ro.javanese.display.version=$(JAVANESE_DISPLAY_VERSION) \
+    ro.javanese.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.modversion=$(JAVANESE_VERSION)
 
 # LineageOS Platform SDK Version
 ADDITIONAL_BUILD_PROPERTIES += \
@@ -17,4 +17,4 @@ ADDITIONAL_BUILD_PROPERTIES += \
 
 # LineageOS Platform Internal Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+    ro.javanese.build.version.plat.rev=$(JAVANESE_PLATFORM_REV)
